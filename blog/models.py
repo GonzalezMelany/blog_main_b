@@ -5,7 +5,7 @@ class Category(models.Model):
     title = models.CharField(max_lengh=225)
 
     class Meta:
-        ordering = ('title')
+        ordering = ('title',)
         verbose_name_plural = 'Categorias'
 
         def _str_(self):
