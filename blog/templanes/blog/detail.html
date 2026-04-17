@@ -60,6 +60,14 @@
                     <span class="badge bg-light text-primary ms-2 fs-6 border">{{ post.comments.count }}</span>
                 </h3>
 
+                <form action=""method="post">
+                    {% csrf_token %}
+
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-primary mb-3">
+                        Agrega Comentario
+                    </button>
+                </form>
                 {% for comment in post.comments.all %}
                 <div class="d-flex mb-4 p-3 rounded-3 hover-bg-light transition-all">
                     <div class="flex-shrink-0">
